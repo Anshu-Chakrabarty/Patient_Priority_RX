@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KHNLFW2J');</script>
+<!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Patient Priority – Indiana's trusted workers' compensation pharmacy partner. We handle medication delivery, insurance coordination, and billing so attorneys, physicians, and adjusters can focus on what they do best."
@@ -583,6 +590,40 @@
         .yt-desc a:hover {
             text-decoration: underline;
         }
+        /* ── CONTACT FORM SECTION ── */
+
+        .form-section {
+            padding: 72px 0 80px;
+            background: var(--white);
+        }
+
+        .form-section .section-center h2 {
+            font-size: clamp(24px, 3.5vw, 40px);
+            font-weight: 900;
+            color: var(--navy);
+            font-variant: small-caps;
+            letter-spacing: .5px;
+            margin-bottom: 12px;
+        }
+
+        .form-section .section-center p {
+            font-size: 16px;
+            color: var(--muted);
+            max-width: 640px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+
+        .form-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 16px 56px rgba(0,0,0,.10);
+            background: var(--off-white);
+            padding: 32px;
+        }
+
         /* ── B2B VALUE PROP ── */
         
         .b2b-section {
@@ -1644,6 +1685,11 @@
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHNLFW2J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
 
     <!-- ANNOUNCE BAR -->
     <div class="announce-bar">
@@ -1742,6 +1788,36 @@
                     overnight via UPS, before patients run out. Our nationwide workers' compensation medication delivery service operates across 27+ states.</p>
                 <p style="margin-top:14px">As a specialized workers' comp pharmacy, our goal is to eliminate prescription headaches for <a href="contact.html">attorneys</a>, <a href="contact.html">physicians</a>, and <a href="contact.html">adjusters</a> — handling delivery, billing,
                     and insurance disputes so you can stay focused on your core work.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="form-section" aria-labelledby="form-heading">
+        <div class="container">
+            <div class="section-center reveal">
+                <h2 id="form-heading">Get in Touch</h2>
+                <p>Ready to partner with us? Fill out the form below and a member of our team will be in touch shortly.</p>
+            </div>
+            <div class="form-wrap reveal">
+                <iframe
+                    src="https://link.msgsndr.com/widget/form/ule6gaitlhyCgntYruZM"
+                    style="width:100%;height:557px;border:none;border-radius:0px"
+                    id="inline-ule6gaitlhyCgntYruZM"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact Form - Scott"
+                    data-height="557"
+                    data-layout-iframe-id="inline-ule6gaitlhyCgntYruZM"
+                    data-form-id="ule6gaitlhyCgntYruZM"
+                    title="Contact Form - Scott">
+                </iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
             </div>
         </div>
     </section>
@@ -2324,6 +2400,20 @@
         } else {
             revealEls.forEach(el => el.classList.add('visible'));
         }
+    </script>
+
+    <script>
+        // Detect GHL survey submission and redirect to local thank-you page
+        window.addEventListener('message', function(e) {
+            if (e.data && (
+                e.data.type === 'surveySubmitted' ||
+                e.data.type === 'form-submitted' ||
+                e.data === 'surveySubmitted' ||
+                (typeof e.data === 'string' && e.data.toLowerCase().includes('submit'))
+            )) {
+                window.location.href = 'thankyou.html';
+            }
+        });
     </script>
 </body>
 
